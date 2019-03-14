@@ -4,52 +4,66 @@ body{
 
 .wrapper{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 100%;
     grid-template-rows: 20vh auto 20vh;
     grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer";
+    "header"
+    "main"
+    "footer";
 }
 
 header{
     grid-area: header;
     background-color: blue;
-    height:100%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
 }
+
 /* 
 .kundvagn{
     
 } */
 
-nav{
-    grid-area: nav;
-    background-color: wheat;
-    height:100%;
-    width:100%;
+.menu{
+    font-size: 2rem;
+    margin: 1rem;
+    position: relative;
+    right: 1rem;
 }
 
+#logo{
+    position: absolute;
+    left:1rem;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+
+
+i{
+    transform: translateY(5vh)
+}
 main{
     grid-area: main;
     background-color: peru;
-    height:100%;
+    height: 100%;
     width: 100%;
 }
 
 .ad{
     background-color: antiquewhite;
     margin: 1vw;
-    height: 100%;
+    margin-left: 0;
+    height: auto;
     border-radius: 1vw;
 }
 
 footer{
     grid-area: footer;
     background-color: crimson;
-    height: 100%;
+    height: 20vh;
     width: 100%;
 }
 
@@ -61,15 +75,32 @@ ul{
 
 a{
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+nav{
+    display: none;
 }
 
 @media only screen and (min-device-width : 768px){
     /* and (max-device-width : 1024px) */
     .wrapper{
+        grid-template-columns: 20% 80%;
         grid-template-areas: 
         "header header"
         "nav main"
         "footer footer";
     }
+
+    nav{
+        display: block;
+        grid-area: nav;
+        background-color: wheat;
+        margin: 1vw;
+        border-radius: 1vw;
+    }
+    #hamburger{
+        display: none;
+    }
+    
 }

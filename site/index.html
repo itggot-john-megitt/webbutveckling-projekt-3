@@ -6,33 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webbshop</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <a on click="openMenu()" href="main.js"> <img src="img/baseline-shopping_cart-black-18/2x/baseline_shopping_cart_black_18dp.png" alt=""></a>
+            <!-- <div class="cart">
+                    <i class="material-icons"> remove_shopping_cart</i>
+                    <i class="material-icons"> add_shopping_cart</i>
+            </div> -->
+            <header>
+                <a onclick="openCart()" href="main.js"> <i class="menu material-icons">shopping_cart</i></a>
+                <a onclick="openMenu()" href="main.js"><i id="hamburger" class="menu material-icons">menu</i></a>
+                <a href="./index.html"><i id="logo" class="material-icons">fastfood</i></a>
         </header>
         <main>
             <div class="ad"></div>
-            <div class="new"></div>
-            <div class="sale"></div>
-            <div class="categories">
-                <div class="category"></div>
-                <div class="category"></div>
-                <div class="category"></div>
-                <div class="category"></div>
-                <div class="category"></div>
-                <div class="category"></div>
-            </div>
+            <div class="news"></div>
+            <div class="offers"></div>
+            <div class="meals"></div>
         </main>
         <nav>
             <ul>
                 <a href="./index.html">Hem</a>
-                <a onclick="openMenu()" href="main.js"> Kategorier <img src="img/baseline-keyboard_arrow_down-black-48/1x/baseline_keyboard_arrow_down_black_48dp.png" alt=""></a>
-                <a href="">Om butiken</a>
+                <a href="./om.html">Om butiken</a>
+                <a href="./kontakt.html">Kontakt</a>
             </ul>
         </nav>
         <footer></footer>
     </div>
+    <script src="main"></script>
 </body>
 </html>
