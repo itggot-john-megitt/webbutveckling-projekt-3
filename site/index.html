@@ -16,9 +16,9 @@
                     <i class="material-icons"> add_shopping_cart</i>
             </div> -->
             <header>
-                <a onclick="openCart()" href="main.js"> <i class="menu material-icons">shopping_cart</i></a>
-                <a onclick="openMenu()" href="main.js"><i id="hamburger" class="menu material-icons">menu</i></a>
-                <a href="./index.html"><i id="logo" class="material-icons">fastfood</i></a>
+                <a onclick="openMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
+                <a onclick="openCart()"><i id="carticon" class="icon material-icons">shopping_cart</i></a>
+                <a href="./index.html"><i id="logoicon" class="material-icons">restaurant </i><p id="title">Matlådor</p></a>
         </header>
         <main>
             <div class="ad"></div>
@@ -26,7 +26,7 @@
             <div class="offers"></div>
             <div class="meals"></div>
         </main>
-        <nav>
+        <nav id="theMenu">
             <ul>
                 <a href="./index.html">Hem</a>
                 <a href="./om.html">Om butiken</a>
@@ -35,6 +35,6 @@
         </nav>
         <footer></footer>
     </div>
-    <script src="main"></script>
+    <script src="main.js"></script>
 </body>
 </html>

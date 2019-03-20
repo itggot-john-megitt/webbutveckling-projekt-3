@@ -5,7 +5,7 @@ body{
 .wrapper{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20vh auto 20vh;
+    grid-template-rows: 15vh 80vh 20vh;
     grid-template-areas:
     "header"
     "main"
@@ -17,34 +17,51 @@ header{
     background-color: blue;
     height: 100%;
     width: 100%;
+    position: sticky;
+    top:0;
     display: flex;
     flex-direction: row-reverse;
 }
 
-/* 
+
 .kundvagn{
-    
-} */
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+}
 
-.menu{
-    font-size: 2rem;
-    margin: 1rem;
+.icon{
     position: relative;
-    right: 1rem;
+    margin-right: 1rem;
 }
 
-#logo{
+#logoicon{
     position: absolute;
-    left:1rem;
+    left: 1rem;
     font-size: 2rem;
-    margin: 1rem;
+    line-height: 15vh;
 }
 
-
-
-i{
-    transform: translateY(5vh)
+#hamburgericon{
+    font-size: 2rem;
+    line-height: 15vh;
 }
+
+#carticon{
+    font-size: 2rem;
+    line-height: 15vh;
+}
+
+#title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 4rem;
+    /* transform: translateY(4vh); */
+    line-height: 15vh;
+    font-size: 2rem;
+    margin:0;
+}
+
 main{
     grid-area: main;
     background-color: peru;
@@ -53,11 +70,11 @@ main{
 }
 
 .ad{
-    background-color: antiquewhite;
-    margin: 1vw;
-    margin-left: 0;
-    height: auto;
-    border-radius: 1vw;
+    background-image: url("../img/blog-featured_healthy_foods-20180306.jpg");
+    background-size: cover;
+    margin: 1vh;
+    height: 30%;
+    border-radius: 1vh;
 }
 
 footer{
@@ -79,7 +96,15 @@ a{
 }
 
 nav{
-    display: none;
+    display: block;
+    background-color: wheat;
+    height: 100vh;
+    width: 0vw;
+    opacity: 0;
+    right: 0;
+    transition: 0.6s;
+    position: absolute;
+    /* z-index: 1; */
 }
 
 @media only screen and (min-device-width : 768px){
@@ -96,11 +121,30 @@ nav{
         display: block;
         grid-area: nav;
         background-color: wheat;
-        margin: 1vw;
-        border-radius: 1vw;
+        margin: 1vh;
+        margin-right:0; 
+        border-radius: 1vh;
+        position: sticky;
+        top:16vh;
+        height: 25%;
+        opacity: 1;
+        width: auto;
     }
-    #hamburger{
+    #hamburgericon{
         display: none;
+        font-size: 3rem;
     }
-    
+    #logoicon{
+        font-size: 3rem;
+        line-height: 15vh;
+    }
+    #hamburgericon{
+        font-size: 3rem;
+    }    
+    #carticon{
+        font-size: 3rem;
+    }
+    #title{
+        font-size: 3rem;
+    }
 }
