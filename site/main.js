@@ -1,8 +1,4 @@
 function openCloseMenu(event) {
-    document.getElementById("theMenu").classList.toggle("menu-active")
-    console.log(1)
+  document.getElementById("theMenu").classList.toggle("menu-active")
+  document.body.classList.toggle("noscroll")
 }
-  /* Set the width of the side navigation to 0 */
-//   function closeNav(event) {
-//     document.getElementById("theMenu").style.width = "0";
-//   }
