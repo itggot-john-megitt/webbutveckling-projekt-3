@@ -16,7 +16,7 @@
                     <i class="material-icons"> add_shopping_cart</i>
             </div> -->
             <header>
-                <a onclick="openMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
+                <a onclick="openCloseMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
                 <a onclick="openCart()"><i id="carticon" class="icon material-icons">shopping_cart</i></a>
                 <a href="./index.html"><i id="logoicon" class="material-icons">restaurant </i><p id="title">Matlådor</p></a>
         </header>
@@ -27,6 +27,7 @@
             <div class="meals"></div>
         </main>
         <nav id="theMenu">
+                <a class="closer" onclick="openCloseMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
             <ul>
                 <a href="./index.html">Hem</a>
                 <a href="./om.html">Om butiken</a>

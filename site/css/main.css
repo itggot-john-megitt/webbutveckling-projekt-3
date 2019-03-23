@@ -87,24 +87,50 @@ footer{
 ul{
     display: flex;
     flex-direction: column;
-    
+    /* left:0; */
+    /* transform: translateY() */
+    justify-self: center;
+    margin: 1vh;
+    padding-top: 2vh;
+}
+
+i,p{
+    text-decoration: none;
+    color: black;
+    /* text-shadow:      */
 }
 
 a{
     text-decoration: none;
-    font-size: 1.5em;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 1vh; 
 }
 
 nav{
-    display: block;
-    background-color: wheat;
+    display: flex;
+    background-image: url("../img/empty_road_in_forest_display.jpg");
+    background-size: cover;
+    background-position: bottom;
     height: 100vh;
     width: 0vw;
     opacity: 0;
     right: 0;
     transition: 0.6s;
-    position: absolute;
+    position: fixed;
+    top:0
     /* z-index: 1; */
+}
+
+.closer{
+    position: absolute;
+    right: 0;
+}
+
+.menu-active{
+    width: 100vw;
+    opacity: 1;
 }
 
 @media only screen and (min-device-width : 768px){
@@ -117,6 +143,10 @@ nav{
         "footer footer";
     }
 
+    .closer{
+        display: none;
+    }
+
     nav{
         display: block;
         grid-area: nav;
@@ -126,25 +156,29 @@ nav{
         border-radius: 1vh;
         position: sticky;
         top:16vh;
-        height: 25%;
+        height: 20vh;
         opacity: 1;
         width: auto;
+        background-image: none;
+        display: flex;
+        justify-content: left;
     }
     #hamburgericon{
         display: none;
-        font-size: 3rem;
     }
     #logoicon{
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 15vh;
     }
-    #hamburgericon{
-        font-size: 3rem;
-    }    
-    #carticon{
-        font-size: 3rem;
+    #carticon,#title,nav{
+        font-size: 2rem;
     }
-    #title{
-        font-size: 3rem;
+    nav,a{
+        padding: 0.1vh;
+        /* line-height: 1fr 1fr 1fr; */
     }
+    nav, ul {
+        padding: 0;
+    }
+
 }
