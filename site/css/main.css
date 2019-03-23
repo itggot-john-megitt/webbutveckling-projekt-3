@@ -40,6 +40,7 @@ header{
     left: 1rem;
     font-size: 2rem;
     line-height: 15vh;
+<<<<<<< HEAD
 }
 
 #hamburgericon{
@@ -47,6 +48,15 @@ header{
     line-height: 15vh;
 }
 
+=======
+}
+
+#hamburgericon{
+    font-size: 2rem;
+    line-height: 15vh;
+}
+
+>>>>>>> parent of b37b243... added products and menu animation
 #carticon{
     font-size: 2rem;
     line-height: 15vh;
@@ -88,6 +98,7 @@ ul{
     display: flex;
     flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* left:0; */
     /* transform: translateY() */
     justify-self: center;
@@ -99,6 +110,9 @@ i,p{
     text-decoration: none;
     color: black;
     /* text-shadow:      */
+=======
+    
+>>>>>>> parent of b37b243... added products and menu animation
 =======
     
 >>>>>>> parent of b37b243... added products and menu animation
@@ -118,6 +132,7 @@ nav{
     right: 0;
     transition: 0.6s;
 <<<<<<< HEAD
+<<<<<<< HEAD
     position: fixed;
     top:0
     /* z-index: 1; */
@@ -135,6 +150,10 @@ nav{
     position: absolute;
     /* z-index: 1; */
 >>>>>>> parent of b37b243... added products and menu animation
+=======
+    position: absolute;
+    /* z-index: 1; */
+>>>>>>> parent of b37b243... added products and menu animation
 }
 
 @media only screen and (min-device-width : 768px){
@@ -148,10 +167,13 @@ nav{
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .closer{
         display: none;
     }
 
+=======
+>>>>>>> parent of b37b243... added products and menu animation
 =======
 >>>>>>> parent of b37b243... added products and menu animation
     nav{
@@ -178,6 +200,7 @@ nav{
         line-height: 15vh;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     #carticon,#title,nav{
         font-size: 2rem;
     }
@@ -189,6 +212,17 @@ nav{
         padding: 0;
     }
 
+=======
+    #hamburgericon{
+        font-size: 3rem;
+    }    
+    #carticon{
+        font-size: 3rem;
+    }
+    #title{
+        font-size: 3rem;
+    }
+>>>>>>> parent of b37b243... added products and menu animation
 =======
     #hamburgericon{
         font-size: 3rem;
