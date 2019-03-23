@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function openCloseMenu(event) {
   document.getElementById("theMenu").classList.toggle("menu-active")
   document.body.classList.toggle("noscroll")
 }
 =======
+=======
+>>>>>>> parent of b37b243... added products and menu animation
 =======
 >>>>>>> parent of b37b243... added products and menu animation
 function openMenu(event) {
@@ -16,6 +19,10 @@ function openMenu(event) {
   function closeNav(event) {
     document.getElementById("theMenu").style.width = "0";
 <<<<<<< HEAD
+<<<<<<< HEAD
+  }
+>>>>>>> parent of b37b243... added products and menu animation
+=======
   }
 >>>>>>> parent of b37b243... added products and menu animation
 =======
