@@ -1,9 +1,4 @@
-function openMenu(event) {
-    document.getElementById("theMenu").style.width = "100vw";
-    document.getElementById("theMenu").style.opacity = "1";
-  }
-  
-  /* Set the width of the side navigation to 0 */
-  function closeNav(event) {
-    document.getElementById("theMenu").style.width = "0";
-  }
+function openCloseMenu(event) {
+  document.getElementById("theMenu").classList.toggle("menu-active")
+  document.body.classList.toggle("noscroll")
+}
