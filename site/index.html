@@ -11,39 +11,162 @@
 </head>
 <body>
     <div class="wrapper">
-            <!-- <div class="cart">
-                    <i class="material-icons"> remove_shopping_cart</i>
-                    <i class="material-icons"> add_shopping_cart</i>
-            </div> -->
-            <header>
-                <a onclick="openMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
-                <a onclick="openCart()"><i id="carticon" class="icon material-icons">shopping_cart</i></a>
-                <a href="./index.html"><i id="logoicon" class="material-icons">restaurant </i><p id="title">Matlådor</p></a>
+        <!-- <div class="cart">
+                <i class="material-icons"> remove_shopping_cart</i>
+                <i class="material-icons"> add_shopping_cart</i>
+        </div> -->
+        <header>
+            <a onclick="openCloseMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
+            <a onclick="openCart()"><i id="carticon" class="icon material-icons">shopping_cart</i></a>
+            <a href="./index.html"><i id="logoicon" class="material-icons">restaurant </i><p id="title">Matlådor</p></a>
         </header>
         <main>
             <div class="ad"></div>
-            <div class="news"></div>
-            <div class="offers"></div>
-            <div class="meals"></div>
+            <!-- <div class="infos"></div>
+            <div class="offers"></div> -->
+            <div class="meals"> 
+                <div class="meal" id="meal1">
+                    <div class="mealpic" id="mealpic1"></div>
+                    <div class="mealname">Köttbullar</div>
+                    <div class="price">50 kr</div>
+                    <div class="veg">V</div>
+                    <div class="info"><a onclick="open1()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+                </div>
+                <div class="meal" id="meal2">
+                    <div class="mealpic" id="mealpic2"></div>
+                    <div class="mealname">Flera spaghetti</div>
+                    <div class="price">40 kr</div>
+                    <div class="info"><a onclick="open2()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="veg">V</div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+                </div>
+                <div class="meal" id="meal3">
+                    <div class="mealpic" id="mealpic3"></div>                
+                    <div class="mealname">Hamburgare</div>
+                    <div class="price">35 kr</div>
+                    <div class="info"><a onclick="open3()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+                </div>
+                <div class="meal" id="meal4">
+                    <div class="mealpic" id="mealpic4"></div>
+                    <div class="mealname">Mycket mat</div>
+                    <div class="price">55 kr</div>
+                    <div class="info"><a onclick="open4()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+                </div>
+                <div class="meal" id="meal5">
+                    <div class="mealpic" id="mealpic5"></div>
+                    <div class="mealname">Grönsak</div>
+                    <div class="price">35 kr</div>
+                    <div class="info"><a onclick="open5()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="veg">V</div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+                </div>
+                <div class="meal" id="meal6">
+                    <div class="mealpic"id="mealpic6"></div>
+                    <div class="mealname">En spaghetto</div>
+                    <div class="price">5 kr</div>
+                    <div class="info"><a onclick="open6()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+                    <div class="veg">V</div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+
+                </div>
+                <div class="meal" id="meal7">
+                    <div class="mealpic" id="mealpic7"></div>
+                    <div class="mealname">Soppa</div>
+                    <div class="price">25 kr</div>
+                    <div class="info"><a onclick="open7()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="veg">V</div>
+                    <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>        
+                </div>                
+                <div class="meal" id="meal8">
+                    <div class="mealpic" id="mealpic8"></div>
+                    <div class="mealname">Frukost</div>
+                    <div class="price">70 kr</div>
+                    <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+                    <div class="info"><a onclick="open8()"><i class="material-icons mealicon">info</i></a></div>
+                    <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+                </div>
+            </div>
         </main>
+        <div id="theInfo1">
+            <div class="mealpic" id="mealpic1"></div>
+            <div class="mealname">Köttbullar</div>
+            <div class="price">50 kr</div>
+            <div class="info"><a onclick="open1()"><i class="material-icons mealicon">info</i></a></div>
+            <div class="veg">V</div>
+            <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo2">
+            <div class="mealpic" id="mealpic2"></div>
+            <div class="mealname">Flera spaghetti</div>
+            <div class="price">40 kr</div>
+            <div class="info"><a onclick="open2()"><i class="material-icons mealicon">info</i></a></div>
+            <div class="veg">V</div>
+            <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo3">
+            <div class="mealpic" id="mealpic3"></div>                
+            <div class="mealname">Hamburgare</div>
+            <div class="price">35 kr</div>
+            <div class="info"><a onclick="open3()"><i class="material-icons mealicon">info</i></a></div>
+            <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+            <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo4">
+            <div class="mealpic" id="mealpic4"></div>
+            <div class="mealname">Mycket mat</div>
+            <div class="price">55 kr</div>
+            <div class="info"><a onclick="open4()"><i class="material-icons mealicon">info</i></a></div>
+            <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo5">
+            <div class="mealpic" id="mealpic5"></div>
+            <div class="mealname">Grönsak</div>
+            <div class="price">35 kr</div>
+            <div class="info"><a onclick="open5()"><i class="material-icons mealicon">info</i></a></div>
+            <div class="veg">V</div>
+            <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo6">
+                <div class="mealpic"id="mealpic6"></div>
+                <div class="mealname">En spaghetto</div>
+                <div class="price">5 kr</div>
+                <div class="info"><a onclick="open6()"><i class="material-icons mealicon">info</i></a></div>
+                <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+                <div class="veg">V</div>
+                <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo7">
+                <div class="mealpic" id="mealpic7"></div>
+                <div class="mealname">Soppa</div>
+                <div class="price">25 kr</div>
+                <div class="info"><a onclick="open7()"><i class="material-icons mealicon">info</i></a></div>
+                <div class="veg">V</div>
+                <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+                <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theInfo8">
+            <div class="mealpic" id="mealpic8"></div>
+            <div class="mealname">Frukost</div>
+            <div class="price">70 kr</div>
+            <div class="eco"><i class="material-icons mealicon">local_florist</i></div>
+            <div class="info"><a onclick="open8()"><i class="material-icons mealicon">info</i></a></div>
+            <div class="buy"> <div class="text">Köp</div> <i class="material-icons text"> add_shopping_cart</i></div>
+        </div>
+        <div id="theShadow"></div>
         <nav id="theMenu">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <a class="closer" onclick="openCloseMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
-=======
->>>>>>> parent of b37b243... added products and menu animation
-=======
->>>>>>> parent of b37b243... added products and menu animation
-=======
->>>>>>> parent of b37b243... added products and menu animation
+            <a class="closer list" onclick="openCloseMenu()"><i id="hamburgericon" class="material-icons mealicon">menu</i></a>
             <ul>
-                <a href="./index.html">Hem</a>
-                <a href="./om.html">Om butiken</a>
-                <a href="./kontakt.html">Kontakt</a>
+                <a href="./index.html" class="list">Hem</a>
+                <a href="./om.html" class="list">Om butiken</a>
+                <a href="./kontakt.html" class="list">Kontakt</a>
             </ul>
-        </nav>
-        <footer></footer>
+        </nav>  
     </div>
     <script src="main.js"></script>
 </body>

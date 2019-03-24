@@ -1,20 +1,21 @@
 body{
-   margin: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .wrapper{
+    width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 80vh 20vh;
+    grid-template-rows: 15vh auto;
     grid-template-areas:
     "header"
-    "main"
-    "footer";
+    "main";
 }
 
 header{
     grid-area: header;
-    background-color: blue;
+    background-color: cornflowerblue;
     height: 100%;
     width: 100%;
     position: sticky;
@@ -33,39 +34,15 @@ header{
 .icon{
     position: relative;
     margin-right: 1rem;
+    padding: 0;
 }
 
 #logoicon{
     position: absolute;
     left: 1rem;
-    font-size: 2rem;
-    line-height: 15vh;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of b37b243... added products and menu animation
 }
 
-#hamburgericon{
-    font-size: 2rem;
-    line-height: 15vh;
-<<<<<<< HEAD
-}
-
-=======
-}
-
-#hamburgericon{
-    font-size: 2rem;
-    line-height: 15vh;
-}
-
->>>>>>> parent of b37b243... added products and menu animation
-=======
-}
-
->>>>>>> parent of b37b243... added products and menu animation
-#carticon{
+#hamburgericon,#carticon,#logoicon{
     font-size: 2rem;
     line-height: 15vh;
 }
@@ -82,183 +59,271 @@ header{
 
 main{
     grid-area: main;
-    background-color: peru;
+    /* background-color: peru; */
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
 }
 
 .ad{
-    background-image: url("../img/blog-featured_healthy_foods-20180306.jpg");
-    background-size: cover;
+    background-image: url(../img/thead2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
     margin: 1vh;
-    height: 30%;
+    margin-bottom: 0;
+    /* height: 28vh; */
     border-radius: 1vh;
 }
 
-footer{
-    grid-area: footer;
-    background-color: crimson;
-    height: 20vh;
-    width: 100%;
+.meals{
+    margin-right: 1vh;
+    height: 200vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
 }
 
+.meal{
+    padding: 1vh;
+    padding-right: 0;
+    /* width: 100%;      */
+    /* height: 100%; */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 5fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 8fr 1fr 1fr;
+    grid-template-areas:
+    "mealpic mealpic mealpic mealpic mealpic"
+    "mealname empty indicator3 indicator2 indicator1"
+    "price empty buy buy buy";
+}
+
+.buy{
+    background-color: cornflowerblue;
+    grid-area: 3 / 3 / span 1 / span 3;
+    height:100%;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 100%;
+}
+.veg{
+    background-color: greenyellow;
+    grid-area: 2 / 3 /span 1/ span 1;
+    width:24px;
+    height:80%;
+    border-radius: 50%;
+    line-height: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    text-align: center;
+}
+.shadow-active{
+    opacity: 0.6 !important;
+    z-index: 1 !important;
+}
+#theShadow{
+    background-color: black;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.eco{
+    background-color: green;
+    grid-area: 2 / 4;
+    border-radius: 50%;
+    height:80%;
+}
+.info{
+    grid-area: 2 / 5;
+    background-color: lightgray;
+    border-radius: 50%;
+    height:80%;
+}
+.mealicon{
+    font-size: 5vw;
+    text-align: center;
+    line-height: 100%;
+}
+.mealname{
+    grid-area: 2 / 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 80%;
+}
+.price{
+    grid-area: 3 / 1;    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 80%;
+}
+
+.mealpic{
+    background-color: bisque;
+    /* border-width: 1px;
+    border-style: solid; */
+    grid-area: 1 / 1 /span 1/ span 5;
+    background-size: cover;
+    border-radius: 1vh; 
+}
+#mealpic1{
+    background-image: url(../img/Köttbullar_at_IKEA_Xihongmen_\(20150423114159\).JPG);
+}
+#mealpic2{
+    background-image: url(../img/spaghetti-pasta-noodles-food-drink-10af25-1024.jpg);
+}
+#mealpic3{
+    background-image: url(../img/Minted-Lamb-Burger-with-F-476840.jpg)
+}
+#mealpic4{
+    background-image: url(../img/healthy-food-1348430_960_720.jpg);
+}
+#mealpic5{
+    background-image: url(../img/cucumber-food-vegetable-food-drink-9502a4-1024.jpg);
+}
+#mealpic6{
+    background-image: url(../img/Unu_spageto.jpg);
+}
+#mealpic7{
+    background-image: url(../img/Carrot-Ginger-Soup-with-Coconut-Milk-the-barefoot-cook.jpg);
+}
+#mealpic8{
+    background-image: url(../img/sandwich-451403_960_720.jpg);
+}
+.text{
+    font-size: 20px !important;
+    margin: 2px;
+    vertical-align: center;
+}
 ul{
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /* left:0; */
-    /* transform: translateY() */
-    justify-self: center;
-    margin: 1vh;
-    padding-top: 2vh;
+    padding-left: 1rem !important;
 }
 
-i,p{
-    text-decoration: none;
-    color: black;
-    /* text-shadow:      */
-=======
-    
->>>>>>> parent of b37b243... added products and menu animation
-=======
-    
->>>>>>> parent of b37b243... added products and menu animation
-=======
-    
->>>>>>> parent of b37b243... added products and menu animation
+.list{
+    color: white;
+    padding-top: 1vh; 
 }
 
 a{
     text-decoration: none;
-    font-size: 1.5em;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav{
-    display: block;
-    background-color: wheat;
     height: 100vh;
+    display: flex;
+    background-image: url(../img/dark-wood-and-vegetables.jpg);
+    background-size: cover;
+    background-position: right;
     width: 0vw;
     opacity: 0;
-    right: 0;
     transition: 0.6s;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     position: fixed;
-    top:0
-    /* z-index: 1; */
-}
-
-.closer{
-    position: absolute;
+    top: 0;
     right: 0;
 }
-
 .menu-active{
     width: 100vw;
     opacity: 1;
-=======
+}
+.noscroll{
+    overflow-y: hidden;
+}
+.closer{
     position: absolute;
-    /* z-index: 1; */
->>>>>>> parent of b37b243... added products and menu animation
-=======
-    position: absolute;
-    /* z-index: 1; */
->>>>>>> parent of b37b243... added products and menu animation
-=======
-    position: absolute;
-    /* z-index: 1; */
->>>>>>> parent of b37b243... added products and menu animation
+    right: 1rem;
+    padding:0;
+} 
+#theInfo1,#theInfo2,#theInfo3,#theInfo4,#theInfo5,#theInfo6,#theInfo7,#theInfo8{
+    margin-top:0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.info-active{
+    opacity: 1 !important;
+    margin-top: 15% !important;
+    height: 60% !important;
+    width: 80% !important;
+    display: grid;
+    grid-template-columns: 5fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 8fr 1fr 1fr;
+    transition: 0.6s;
+    z-index: 2;  
+    position: fixed;
+    top: 0;
+    right: 10%;
+    background-color: white;
 }
 
 @media only screen and (min-device-width : 768px){
     /* and (max-device-width : 1024px) */
     .wrapper{
         grid-template-columns: 20% 80%;
+        grid-template-rows: 15vh auto;
         grid-template-areas: 
         "header header"
-        "nav main"
-        "footer footer";
+        "nav main";
     }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+    main{
+        grid-template-rows: 36vh 65%;
+    }
+    .list{
+        color: black; 
+    }
     .closer{
         display: none;
     }
-
-=======
->>>>>>> parent of b37b243... added products and menu animation
-=======
->>>>>>> parent of b37b243... added products and menu animation
-=======
->>>>>>> parent of b37b243... added products and menu animation
+    .icon{
+        margin-right: 2rem;
+    }
     nav{
         display: block;
         grid-area: nav;
-        background-color: wheat;
+        background-image: url(../img/o-REPURPOSING-IDEA-facebook.jpg);
+        background-size: cover;
         margin: 1vh;
         margin-right:0; 
         border-radius: 1vh;
-        position: sticky;
-        top:16vh;
-        height: 20vh;
+        position: fixed;
+        left: 0;
+        top: 15vh;
+        right: unset;
         opacity: 1;
-        width: auto;
-        background-image: none;
-        display: flex;
-        justify-content: left;
+        width: 19vw;
+        height: 35vh;
     }
     #hamburgericon{
         display: none;
+        font-size: 3rem;
     }
     #logoicon{
-        font-size: 2rem;
+        font-size: 3rem;
         line-height: 15vh;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    #carticon,#title,nav{
-        font-size: 2rem;
+    .ad{
+        height: 35vh;
+        background-image: url(../img/thead3.jpg);
+        background-position: center;
     }
-    nav,a{
-        padding: 0.1vh;
-        /* line-height: 1fr 1fr 1fr; */
-    }
-    nav, ul {
-        padding: 0;
-    }
-
-=======
-=======
->>>>>>> parent of b37b243... added products and menu animation
-    #hamburgericon{
-        font-size: 3rem;
-    }    
-    #carticon{
+    #carticon,#title,#hamburgericon{
         font-size: 3rem;
     }
-    #title{
-        font-size: 3rem;
-<<<<<<< HEAD
+    .meals{
+        /* margin-right:1vh;    */
+        /* width: 99%; */
+        height: 40vw;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20vw 20vw;
     }
->>>>>>> parent of b37b243... added products and menu animation
-=======
-    #hamburgericon{
-        font-size: 3rem;
-    }    
-    #carticon{
-        font-size: 3rem;
-    }
-    #title{
-        font-size: 3rem;
-    }
->>>>>>> parent of b37b243... added products and menu animation
-=======
-    }
->>>>>>> parent of b37b243... added products and menu animation
+    
 }
