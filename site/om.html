@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webbshop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper2">
+        <header>
+            <a onclick="openCloseMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
+            <a onclick="openCloseCart()"><i id="carticon" class="icon material-icons">shopping_cart</i></a>
+            <a href="./index.html"><i id="logoicon" class="material-icons">restaurant </i><p id="title">Matlådor</p></a>
+        </header>
+        
+        <div class="ombild"></div>
+        <div class="omtextbox">
+            <h1>Om butiken</h1>
+            <div class="omtext">Hej jag här Mr. Matlåda eller John och det är min sida du är på. </br>Den här sidan etablerades 2019 och har sedan dess lockat kunder från hela världen. </br> </br>På den här sidan har jag mat och om du vill ha mat så köp mat. Swischa rätt mängd för varan och skriv ett önskemål som meddelande så gör jag mitt bästa. </br></br>Ex: "Hej jag vill ha en al dente spaghetto levererad till en mörk gränd imorgon 02.30, tack för att du finns, Mr. Matlåda"</br></br>Det här är inget skämt, jag skickar en spaghetto. Kontaktuppgifter på kontaktsidan.</div>
+        </div>
+        <div id="theShadow"></div>
+        <div id="theCart" class="cart-inactive">
+            <div class="carttitle"><div class="i">Kundvagn</div></div>
+            <div class="closeCart"><i class="material-icons">close </i></div>
+            <i class="material-icons"> remove_shopping_cart</i>
+            <i class="material-icons"> add_shopping_cart</i>
+        </div>
+        <nav id="theMenu">
+            <a class="closer list" onclick="openCloseMenu()"><i id="hamburgericon" class="material-icons mealicon">menu</i></a>
+            <ul>
+                <a href="./index.html" class="list">Hem</a>
+                <a href="./om.html" class="list">Om butiken</a>
+                <a href="./kontakt.html" class="list">Kontakt</a>
+            </ul>
+        </nav>  
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

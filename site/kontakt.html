@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webbshop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper2">
+        <header>
+            <a onclick="openCloseMenu()"><i id="hamburgericon" class="icon material-icons">menu</i></a>
+            <a onclick="openCloseCart()"><i id="carticon" class="icon material-icons">shopping_cart</i></a>
+            <a href="./index.html"><i id="logoicon" class="material-icons">restaurant </i><p id="title">Matlådor</p></a>
+        </header>
+        
+        <div class="kontaktbild"></div>
+        <div class="omtextbox">
+            <h1>Kontakt</h1>
+            <div class="omtext">Anställda:</br>Mr. Matlåda </br>John Megitt</br></br>Mail: john.megitt@elev.ga.ntig.se</br>Swish/Telefon: 0737-659904</div>
+        </div>
+        <div id="theShadow"></div>
+        <div id="theCart" class="cart-inactive">
+            <div class="carttitle"><div class="i">Kundvagn</div></div>
+            <div class="closeCart"><i class="material-icons">close </i></div>
+            <i class="material-icons"> remove_shopping_cart</i>
+            <i class="material-icons"> add_shopping_cart</i>
+        </div>
+        <nav id="theMenu">
+            <a class="closer list" onclick="openCloseMenu()"><i id="hamburgericon" class="material-icons mealicon">menu</i></a>
+            <ul>
+                <a href="./index.html" class="list">Hem</a>
+                <a href="./om.html" class="list">Om butiken</a>
+                <a href="./kontakt.html" class="list">Kontakt</a>
+            </ul>
+        </nav>  
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

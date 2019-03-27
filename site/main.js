@@ -34,3 +34,7 @@ function open8(event){
   document.getElementById("theInfo8").classList.toggle("info-active")
   document.getElementById("theShadow").classList.toggle("shadow-active")
 }
+function openCloseCart(event){
+  document.getElementById("theCart").classList.toggle("cart-active")
+  document.getElementById("theShadow").classList.toggle("shadow-active")
+}
