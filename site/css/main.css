@@ -66,10 +66,10 @@ main{
 }
 
 .ad{
-    background-image: url(../img/thead2.jpg);
+    background-image: url(../img/ad_mobile.jpg),url(../img/alt_header.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: top;
+    background-position: top,center;
     margin: 1vh;
     margin-bottom: 0;
     /* height: 28vh; */
@@ -340,7 +340,6 @@ nav{
     background-color: lightskyblue;
     border-radius: 1vh;
     margin: 1vh;
-    margin-left: 0;
     padding: 1vh;
     grid-area: 3 / 2 ;
 }
@@ -363,14 +362,14 @@ h1{
     background-size: 40%;
 }
 .ombild{
-    background-image: url(../img/om2.jpg);
+    background-image: url(../img/om.jpg);
 }
 
 .kontaktbild{
     background-image: url(../img/kontakt.jpg);
 }
 
-@media only screen and (min-device-width : 768px){
+@media only screen and (min-device-width : 1024px){
     header{
         grid-area: 1/1/span 1/ span 2;
     }
@@ -407,15 +406,14 @@ h1{
     }
     nav{
         display: block;
-        grid-area: nav;
+        grid-area: 2/1;
         background-image: url(../img/o-REPURPOSING-IDEA-facebook.jpg);
         background-size: cover;
         margin: 1vh;
         margin-right:0; 
         border-radius: 1vh;
-        position: fixed;
+        position: unset;
         left: 0;
-        top: 15vh;
         right: unset;
         opacity: 1;
         width: 19vw;
@@ -431,7 +429,7 @@ h1{
     }
     .ad{
         height: 35vh;
-        background-image: url(../img/thead3.jpg);
+        background-image: url(../img/ad_desktop.jpg),url(../img/alt_header.jpg);
         background-position: center;
     }
     #carticon,#title,#hamburgericon{
