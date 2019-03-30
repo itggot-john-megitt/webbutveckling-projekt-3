@@ -15,7 +15,6 @@ body{
         background-color: cornflowerblue;
         height: 100%;
         width: 100%;
-        /* position: sticky; */
         top:0;
         display: flex;
         flex-direction: row-reverse;
@@ -77,22 +76,23 @@ body{
         }
         .mealname{
             grid-area: 2 / 1 / span 1/ span 2;
+            cursor: pointer;
         }
         .price{
             grid-area: 3 / 1;   
-            align-self: flex-end;
+            cursor: default;
         }
         .mealname,.price{
             font-size: 80%;
             margin: 0.5vh;
-            cursor: default;
         }
         .buy{
             background-color: cornflowerblue;
-            grid-area: 3 / 3 / span 1 / span 3;
-            height:100%;
+            grid-area: 2 / 3 / span 2 / span 3;
+            height:80%;
             border-radius: 1vh;
             display: flex;
+            align-self: center;
             justify-content: center;
             line-height: 100%;
             cursor: pointer;
@@ -100,16 +100,15 @@ body{
         /* Product icons */
             .veg{
                 background-color: greenyellow;
-                grid-area: 2 / 3 /span 1/ span 1;
                 width:24px;
                 height:24px;
                 border-radius: 50%;
                 line-height: 24px;
                 font-size: 16px;
                 text-align: center;
-                justify-self: center;
-                align-self: center;
-                cursor: default;
+                justify-self: right;
+                align-self: flex-end;
+                margin: 0.5vh;
             }
             .eco{
                 background-color: green;
@@ -117,9 +116,10 @@ body{
                 border-radius: 50%;
                 height: 24px;
                 width: 24px;
-                justify-self: center;
-                align-self: center;
+                justify-self: right;
+                align-self: flex-end;
                 cursor: default;
+                margin: 0.5vh;
             }
             .info{
                 cursor: pointer;
@@ -142,7 +142,10 @@ body{
                 background-color: bisque;
                 grid-area: 1 / 1 /span 1/ span 5;
                 background-size: cover;
-                border-radius: 1vh; 
+                border-radius: 1vh;
+                cursor: pointer; 
+                display: flex;
+                flex-direction: row-reverse;
             }
             #mealpic1{
                 background-image: url(../img/Köttbullar_at_IKEA_Xihongmen_\(20150423114159\).JPG);
@@ -286,10 +289,12 @@ body{
             background-size: cover;
             background-position: center;
             grid-area: 1/1;
+            cursor: default;
         }
         .cartname{
             grid-area: 1/2;
             align-self: center; 
+            cursor: default;
         }
         .itemsum{
             grid-area: 1/4;
@@ -343,7 +348,7 @@ body{
         transition: 0.6s;
         display: grid;
         grid-template-columns: 6fr 0vw 8vw 8vw 8vw;
-        grid-template-rows: 1fr 8vw 24vw;
+        grid-template-rows: 1fr 6vw 24vw;
         z-index: 2;  
         position: fixed;
         top: 0;
@@ -354,16 +359,30 @@ body{
         -moz-box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.75);  
         box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.75);           
     }
+    .infoprice{
+        grid-area: 2/3/span 1/span 3;
+        font-size: 100%;
+    }
     .infobuy{
+        grid-area: 3/3/span 1/span 3;
         height: 10vw;
         margin: 0.5vh;
+        width: auto;
+    }
+    .infomealname{
+        cursor: default;
+        font-size: 100%;
+        display: grid;
+        grid-template-rows: 6vw 24vw;
     }
     .infomealpic{
+        cursor: default;
         grid-area: 1 / 1 /span 1/ span 1;
         margin: 0.5vh;
         background-position: center;
     }
     .explanation{
+        cursor: default;
         position: relative;
         top: 24px;
         grid-area: 1/3/span 1/span 3;
@@ -376,6 +395,7 @@ body{
     .mealdesc{
         font-size: 80%;
         margin: 0;
+        grid-area: 2/1;
     }
     .white{
         background-color: white;
@@ -521,20 +541,23 @@ body{
             margin-top: 5vw !important;
             height: 40vw !important;
             width: 60vw !important;
-            grid-template-columns: 6fr 0vw 5vw 5vw 5vw;
-            grid-template-rows: 8fr 5vw 4vw;
+            grid-template-columns: 1fr 0vw 5vw 5vw 5vw;
+            grid-template-rows: 1fr 2vw 8vw;
             right: 20vw;
         }
         .infobuy{
-            height: auto;
+            height: 4vw;
         }
         .explanation{
             font-size: 0.7rem;
             margin-left: 0.5vh;
             margin-right: 1vh;
         }
+        .mealname{
+            grid-template-rows: 2vw 8vw;
+        }
         .mealdesc{
-            font-size: 90%;
+            font-size: 70%;
         }
     
     /* Cart */
