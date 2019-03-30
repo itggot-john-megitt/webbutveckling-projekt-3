@@ -77,14 +77,15 @@ body{
         }
         .mealname{
             grid-area: 2 / 1 / span 1/ span 2;
-            font-size: 80%;
-            margin: 0.5vh;
         }
         .price{
-            grid-area: 3 / 1;    
+            grid-area: 3 / 1;   
+            align-self: flex-end;
+        }
+        .mealname,.price{
             font-size: 80%;
             margin: 0.5vh;
-            align-self: flex-end;
+            cursor: default;
         }
         .buy{
             background-color: cornflowerblue;
@@ -210,26 +211,122 @@ body{
     }
 
 /* Cart */
-    .cart-active{
-        height: 100vw;
-        width: 90vw;
-        background-color: aquamarine;
-    }
     .cart-inactive{
         margin-top:0;
         height: 0;
         width: 0;
         opacity: 0;
         transition: 0.6s;
+        position: fixed;
     }
+    .cart-active{
+        margin-top:0;
+        height: 110vw;
+        width: 90vw;
+        opacity: 1;
+        margin-top: 50%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 11vw 16vw 16vw 16vw 16vw 20vw 1fr;
+        padding: 0,5vh;
+        z-index: 2;  
+        top: 0;
+        right: 5%;
+        background-color: white;
+        border-radius: 1vh;
+        -webkit-box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.75);  
+        box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.75);       
+    }
+    .cartsum,.cartbuy,.summarytext,.carttitle,.cartItem{
+        margin: 0.5vh;
+    }
+    .carttitle{
+        grid-area: 1/1;
+        font-size: 1.5rem;
+        margin-top: 1vh;
+    }
+    .cartCloser{
+        grid-area: 1/1;
+        position: relative;
+        margin-right: 1vh;
+        margin-top: 1vh;
+        justify-self: right;
+        height: 24px;
+    }
+    .remover,.adder,.cartCloser{
+        cursor: pointer;   
+    } 
+    .summary{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .summarytext{
+        font-size: 0.6rem;
+    }
+    .cartsum{
+        align-self: center;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .cartbuy{
+        grid-area: 7/1;
+        height: 60%;
+        width: 50%;
+        justify-self: center;
+        align-self: center;
+    }
+    /* Items in cart */
+        .cartItem{
+            display: grid;
+            grid-template-columns: 25% 30% 25% 20%;
+            margin-bottom: 0;
+        }
+        .cartpic{
+            background-size: cover;
+            background-position: center;
+            grid-area: 1/1;
+        }
+        .cartname{
+            grid-area: 1/2;
+            align-self: center; 
+        }
+        .itemsum{
+            grid-area: 1/4;
+            align-self: center; 
+            text-align: center;
+        }
+        #item1{
+            grid-area: 2/1;
+        }
+        #item2{
+            grid-area: 3/1;
+        }
+        #item3{
+            grid-area: 4/1;
+        }
+        #item4{
+            grid-area: 5/1;
+        }
+
+    /* How many items in cart */
+        .howmany{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-content: center; 
+            text-align: center;
+            grid-area: 1/3;
+            margin-left: 1vh;
+            margin-right: 1vh;
+        }
+        .counter{
+            align-self: center;
+        }
+        .adder,.remover{
+            align-self: center;
+        }
 
 /* Product info */
-    #theInfo1,#theInfo2,#theInfo3,#theInfo4,#theInfo5,#theInfo6,#theInfo7,#theInfo8{
-        margin-top:0;
-        height: 0;
-        width: 0;
-        opacity: 0;
-    }
     .info-inactive{
         position: fixed;
         margin-top:0;
@@ -294,7 +391,7 @@ body{
     }
 
 /* Text */
-    #title,.buy,.veg,.mealname,.price,.omtext,.explanation,a,h1{
+    #title,.summary,.buy,.veg,.mealname,.price,.omtext,.explanation,.itemsum,.counter,.carttitle,a,h1{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     h1{
@@ -439,4 +536,52 @@ body{
         .mealdesc{
             font-size: 90%;
         }
+    
+    /* Cart */
+    .cart-active{
+        margin-top:0;
+        height: 30vw;
+        width: 60vw;
+        margin-top: 15vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4vw 6vw 6vw 2vw 8vw 1fr;
+        right: 20vw;      
+    }
+    .cartCloser{
+        grid-area: 1/2;
+        margin: 2vh;
+    }
+    .cartItem,.carttitle{
+        margin: 1vh;
+        margin-bottom: 0;
+    }
+    .carttitle{    
+        margin-top: 2vh;
+    }
+    #item2{
+        grid-area: 2/2;
+    }
+    #item3{
+        grid-area: 3/1;
+    }
+    #item4{
+        grid-area: 3/2;
+    }
+    .summary{
+        grid-area: 5/1;
+        grid-template-columns: 4fr 2fr;
+    }
+    .cartsum{
+        font-size: 1.5rem;
+        text-align: left
+    }
+    .summarytext{
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .cartbuy{
+        grid-area: 5/2;
+    }
+
 }

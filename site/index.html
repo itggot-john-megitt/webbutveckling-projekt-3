@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webbshop</title>
+    <title>Matlådor</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel='shortcut icon' type='image/x-icon' href='img/icon.png'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -175,10 +176,57 @@
         </div>
         <div id="theShadow"></div>
         <div id="theCart" class="cart-inactive">
-            <div class="carttitle"><div class="i">Kundvagn</div></div>
-            <div class="closeCart"><i class="material-icons">close </i></div>
-            <i class="material-icons"> remove_shopping_cart</i>
-            <i class="material-icons"> add_shopping_cart</i>
+            <div class="carttitle">Kundvagn</div>
+            <div onclick="openCloseCart()" class="cartCloser"><i class="material-icons">close </i></div>
+            <div class="cartItem" id="item1">
+                <div class="mealpic cartpic" id="mealpic1"></div>
+                <div class="mealname cartname">Köttbullar</div>
+                <div class="itemsum">100 kr</div>
+                <div class="howmany" id="howmany1">
+                    <i class="remover material-icons"> remove_circle</i>
+                    <div class="counter">2</div>
+                    <i class="adder material-icons"> add_circle</i>
+                </div>
+            </div>
+            <div class="cartItem" id="item2">
+                <div class="mealpic cartpic" id="mealpic2"></div>
+                <div class="mealname cartname">Flera spaghetti</div>
+                <div class="itemsum">40 kr</div>
+                <div class="howmany" id="howmany2">
+                    <i class="remover material-icons"> remove_circle</i>
+                    <div class="counter">1</div>
+                    <i class="adder material-icons"> add_circle</i>
+                </div>
+            </div>
+            <div class="cartItem" id="item3">
+                <div class="mealpic cartpic" id="mealpic5"></div>
+                <div class="mealname cartname">Grönsak</div>
+                <div class="itemsum">70 kr</div>
+                <div class="howmany" id="howmany3">
+                    <i class="remover material-icons"> remove_circle</i>
+                    <div class="counter">2</div>
+                    <i class="adder material-icons"> add_circle</i>
+                </div>
+            </div>
+            <div class="cartItem" id="item4">
+                <div class="mealpic cartpic" id="mealpic8"></div>
+                <div class="mealname cartname">Frukost</div>
+                <div class="itemsum">280 kr</div>
+                <div class="howmany" id="howmany4">
+                    <i class="remover material-icons"> remove_circle</i>
+                    <div class="counter">4</div>
+                    <i class="adder material-icons"> add_circle</i>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summarytext">
+                    </br>Summa av varor:  490 kr </br></br>
+                    Fraktkostnad:  30 kr </br></br>
+                    Total kostnad:  520 kr
+                 </div>
+                 <div class="cartsum">520 kr</div>
+            </div>
+            <div class="buy cartbuy"> <div class="text">Betala</div> <i class="material-icons text"> forward</i></div>        
         </div>
         <nav id="theMenu">
             <a class="closer list" onclick="openCloseMenu()"><i id="hamburgericon" class="material-icons mealicon">menu</i></a>
