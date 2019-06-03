@@ -19,7 +19,7 @@ body{
         display: flex;
         flex-direction: row-reverse;
     }
-    #title{
+    .title{
         position: absolute;
         left: 4rem;
         line-height: 15vh;
@@ -31,13 +31,13 @@ body{
         margin-right: 1rem;
         padding: 0;
     }
-    #logoicon{
+    .logoicon{
         position: absolute;
         left: 1rem;
     }
-    #hamburgericon,#carticon,#logoicon{
-        font-size: 2rem;
-        line-height: 15vh;
+    .hamburgericon,.carticon,.logoicon{
+        font-size: 2rem !important;
+        line-height: 15vh !important;
         cursor: pointer;
     }
 
@@ -49,16 +49,18 @@ body{
         grid-template-rows: 20% 80%;
     }
     .ad{
-        background-image: url(../img/ad_mobile.jpg),url(../img/alt_header.jpg);
+        background-image: url(../img/ad@W995pxH485px.jpg),url(../img/alt_header@W2626pxH1496px.jpg);
         background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: top,center;
-        margin: 1vh;
+        background-size: cover;
+        background-position: top;
+        width: -webkit-fill-available;
+        margin: 0.5vh;
+        height: 100%;
         margin-bottom: 0;
         border-radius: 1vh;
     }
     .meals{
-        margin-right: 1vh;
+        margin-right: 0.5vh;
         height: 200vw;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -67,12 +69,12 @@ body{
 
     /* Layout of each product */
         .meal{
-            padding: 1vh;
+            padding: 0.5vh;
             padding-right: 0;
             background-color: white;
             display: grid;
             grid-template-columns: 5fr 2fr 24px 24px 24px;
-            grid-template-rows: 8fr 1fr 1fr;
+            grid-template-rows: 70% 15% 15%;
         }
         .mealname{
             grid-area: 2 / 1 / span 1/ span 2;
@@ -98,28 +100,31 @@ body{
             cursor: pointer;
         }
         /* Product icons */
-            .veg{
-                background-color: greenyellow;
-                width:24px;
+            .mealicon,.text,.veg,.eco{
+                background-image: none !important;
+            }
+            .veg,.eco{
+                width:24px !important;
                 height:24px;
                 border-radius: 50%;
-                line-height: 24px;
-                font-size: 16px;
-                text-align: center;
                 justify-self: right;
                 align-self: flex-end;
-                margin: 0.5vh;
+                margin: 0.2vh;
+            }
+            .veg{
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                background-color: greenyellow;
+                font-style: normal;
+            }
+            i{
+                background-image: none !important;
             }
             .eco{
-                background-color: green;
-                grid-area: 2 / 4;
-                border-radius: 50%;
-                height: 24px;
-                width: 24px;
-                justify-self: right;
-                align-self: flex-end;
+                background-color: green !important;
+                grid-area: 2 / 2;
                 cursor: default;
-                margin: 0.5vh;
             }
             .info{
                 cursor: pointer;
@@ -131,6 +136,7 @@ body{
                 height:24px;
                 width: 24px;
             }
+            
             .mealicon{
                 font-size: 5vw;
                 text-align: center;
@@ -146,37 +152,39 @@ body{
                 cursor: pointer; 
                 display: flex;
                 flex-direction: row-reverse;
+                height: 70%;
+                width: -webkit-fill-available;
             }
-            #mealpic1{
-                background-image: url(../img/Köttbullar_at_IKEA_Xihongmen_\(20150423114159\).JPG);
+            .meals :nth-child(1) :first-child,.info-active:nth-of-type(1) :first-child, .cart-active :nth-child(3) :first-child{
+                background-image: url(../img/köttbullar@W568pxH426px.JPG);
             }
-            #mealpic2{
-                background-image: url(../img/spaghetti-pasta-noodles-food-drink-10af25-1024.jpg);
+            .meals :nth-child(2) :first-child,.info-active:nth-of-type(2) :first-child, .cart-active :nth-child(4) :first-child{
+                background-image: url(../img/spaghetti@W568pxH426px.jpg);
             }
-            #mealpic3{
-                background-image: url(../img/Minted-Lamb-Burger-with-F-476840.jpg)
+            .meals :nth-child(3) :first-child,.info-active:nth-of-type(3) :first-child{
+                background-image: url(../img/hamburgare@W568pxH337px.jpg)
             }
-            #mealpic4{
-                background-image: url(../img/healthy-food-1348430_960_720.jpg);
+            .meals :nth-child(4) :first-child,.info-active:nth-of-type(4) :first-child{
+                background-image: url(../img/breads.jpg);
             }
-            #mealpic5{
-                background-image: url(../img/cucumber-food-vegetable-food-drink-9502a4-1024.jpg);
+            .meals :nth-child(5) :first-child,.info-active:nth-of-type(5) :first-child, .cart-active :nth-child(5) :first-child{
+                background-image: url(../img/cucumber@W568pxH378px.jpg);
             }
-            #mealpic6{
-                background-image: url(../img/Unu_spageto.jpg);
+            .meals :nth-child(6) :first-child,.info-active:nth-of-type(6) :first-child{
+                background-image: url(../img/spaghetto@W568pxH426px.jpg);
             }
-            #mealpic7{
-                background-image: url(../img/Carrot-Ginger-Soup-with-Coconut-Milk-the-barefoot-cook.jpg);
+            .meals :nth-child(7) :first-child,.info-active:nth-of-type(7) :first-child{
+                background-image: url(../img/carrot_soup@W568pxH364px.jpg);
             }
-            #mealpic8{
-                background-image: url(../img/sandwich-451403_960_720.jpg);
+            .meals :nth-child(8) :first-child,.info-active:nth-of-type(8) :first-child, .cart-active :nth-child(6) :first-child{
+                background-image: url(../img/sandwich@W568pxH426px.jpg);
             }
 
 /* Nav */
     nav{
         height: 100vh;
         display: flex;
-        background-image: url(../img/dark-wood-and-vegetables.jpg);
+        background-image: url(../img/dark_wood_vegetables@mobile.jpg);
         background-size: cover;
         background-position: right;
         width: 0vw;
@@ -301,17 +309,17 @@ body{
             align-self: center; 
             text-align: center;
         }
-        #item1{
+        .cartItem:nth-of-type(1){
             grid-area: 2/1;
         }
-        #item2{
-            grid-area: 3/1;
+        .cartItem:nth-of-type(2){
+            grid-area: 3/2;
         }
-        #item3{
+        .cartItem:nth-of-type(3){
             grid-area: 4/1;
         }
-        #item4{
-            grid-area: 5/1;
+        .cartItem:nth-of-type(4){
+            grid-area: 5/2;
         }
 
     /* How many items in cart */
@@ -342,9 +350,9 @@ body{
     }
     .info-active{
         opacity: 1 !important;
-        margin-top: 50% !important;
-        height: 100vw !important;
-        width: 90vw !important;
+        margin-top: 40% !important;
+        height: 110vw !important;
+        width: 95vw !important;
         transition: 0.6s;
         display: grid;
         grid-template-columns: 6fr 0vw 8vw 8vw 8vw;
@@ -352,7 +360,7 @@ body{
         z-index: 2;  
         position: fixed;
         top: 0;
-        right: 5%;
+        right: 2.5%;
         background-color: white;
         border-radius: 1vh;
         -webkit-box-shadow: 10px 10px 15px -5px rgba(0,0,0,0.75);
@@ -378,6 +386,7 @@ body{
     .infomealpic{
         cursor: default;
         grid-area: 1 / 1 /span 1/ span 1;
+        height: 95%;
         margin: 0.5vh;
         background-position: center;
     }
@@ -390,12 +399,11 @@ body{
         margin: 0.5vh;
         height: 85%;
         margin-left: 0;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     .mealdesc{
-        font-size: 80%;
-        margin: 0;
-        grid-area: 2/1;
+        font-size: 75%;
+        grid-area: 3/1;
     }
     .white{
         background-color: white;
@@ -411,7 +419,7 @@ body{
     }
 
 /* Text */
-    #title,.summary,.buy,.veg,.mealname,.price,.omtext,.explanation,.itemsum,.counter,.carttitle,a,h1{
+    .title,.summary,.buy,.veg,.mealname,.price,.omtext,.explanation,.itemsum,.counter,.carttitle,a,h1{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     h1{
@@ -454,12 +462,15 @@ body{
         margin: 1vh;
         grid-area: 2 / 2 ;
         background-size: 40%;
+        width: -webkit-fill-available;
     }
     .ombild{
-        background-image: url(../img/om.jpg);
+        background-image: url(../img/om@W995pxH746px.jpg);
+        position: relative;
+        margin-right: 1vh;
     }
     .kontaktbild{
-        background-image: url(../img/kontakt.jpg);
+        background-image: url(../img/kontakt@W995pxH746px.jpg);
     }
     
     
@@ -471,11 +482,11 @@ body{
         .icon{
             margin-right: 2rem;
         }
-        #logoicon{
+        .logoicon{
             line-height: 15vh;
         }
-        #carticon,#title,#hamburgericon,#logoicon{
-            font-size: 3rem;
+        .carticon,.title,.hamburgericon,.logoicon{
+            font-size: 3rem !important;
             cursor: pointer;
         }
         
@@ -490,14 +501,24 @@ body{
         }
         .ad{
             height: 35vh;
-            background-image: url(../img/ad_desktop.jpg),url(../img/alt_header.jpg);
+            background-image: url(../img/ad@W1400pxH683px.jpg),url(../img/alt_header@W2626pxH1496px.jpg);
             background-position: center;
+            margin: 1vh;
+            margin-right: 1vh;
         }
         .meals{
             height: 40vw;
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
             grid-template-rows: 20vw 20vw;
+            margin: 0.5vh;
+        }
+        .meal{
+            padding: 0.5vh;
+            grid-template-rows: 80% 10% 10%;
+        }
+        .mealpic{
+            height: 80%;
         }
     
     /* om.html & kontakt.html */
@@ -509,15 +530,15 @@ body{
         .kontaktbild,.ombild{
             height: 35vh;
         }
-        .omtextbox,.kontaktbild,.ombild{
-            margin-left: 0.4vw;
-        }
+        /* .omtextbox,.kontaktbild,.ombild{ */
+            /* margin-left: 0.4vw; */
+        /* } */
 
     /* Nav */
         nav{
             display: block;
             grid-area: 2/1;
-            background-image: url(../img/o-REPURPOSING-IDEA-facebook.jpg);
+            background-image: url(../img/cutting_board@W1536pxH1024px.jpg);
             background-size: cover;
             margin: 1vh;
             margin-right:0; 
@@ -532,14 +553,17 @@ body{
         .list{
             color: black; 
         }
-        .closer,#hamburgericon{
-            display: none;
+        .closer,.hamburgericon{
+            display: none !important;
         }
 
     /* Product info */
+        .infomealpic{
+            height: 60vh;
+        }
         .info-active{
             margin-top: 5vw !important;
-            height: 40vw !important;
+            height: 50vw !important;
             width: 60vw !important;
             grid-template-columns: 1fr 0vw 5vw 5vw 5vw;
             grid-template-rows: 1fr 2vw 8vw;
@@ -582,13 +606,13 @@ body{
     .carttitle{    
         margin-top: 2vh;
     }
-    #item2{
+    .cartItem:nth-of-type(2){
         grid-area: 2/2;
     }
-    #item3{
+    .cartItem:nth-of-type(3){
         grid-area: 3/1;
     }
-    #item4{
+    .cartItem:nth-of-type(4){
         grid-area: 3/2;
     }
     .summary{
