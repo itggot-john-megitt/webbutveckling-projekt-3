@@ -38,7 +38,6 @@ body{
     .hamburgericon,.carticon,.logoicon{
         font-size: 2rem !important;
         line-height: 15vh !important;
-        cursor: pointer;
     }
 
 /* Main */
@@ -49,7 +48,7 @@ body{
         grid-template-rows: 20% 80%;
     }
     .ad{
-        background-image: url(../img/ad@W995pxH485px.jpg),url(../img/alt_header@W2626pxH1496px.jpg);
+        background-image: url(../img/ad@W995pxH485px.jpg),url(../img/alt_header@W995pxH567px.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
@@ -60,6 +59,7 @@ body{
         border-radius: 1vh;
     }
     .meals{
+        margin-top: 0.5vh;
         margin-right: 0.5vh;
         height: 200vw;
         display: grid;
@@ -81,12 +81,10 @@ body{
             cursor: pointer;
         }
         .price{
-            grid-area: 3 / 1;   
-            cursor: default;
+            grid-area: 3 / 1;  
         }
         .mealname,.price{
             font-size: 80%;
-            margin: 0.5vh;
         }
         .buy{
             background-color: cornflowerblue;
@@ -156,38 +154,38 @@ body{
                 width: -webkit-fill-available;
             }
             .meals :nth-child(1) :first-child,.info-active:nth-of-type(1) :first-child, .cart-active :nth-child(3) :first-child{
-                background-image: url(../img/köttbullar@W568pxH426px.JPG);
+                background-image: url(../img/köttbullar@W417pxH313px.jpg);
             }
             .meals :nth-child(2) :first-child,.info-active:nth-of-type(2) :first-child, .cart-active :nth-child(4) :first-child{
-                background-image: url(../img/spaghetti@W568pxH426px.jpg);
+                background-image: url(../img/spaghetti@W417pxH313px.jpg);
             }
             .meals :nth-child(3) :first-child,.info-active:nth-of-type(3) :first-child{
-                background-image: url(../img/hamburgare@W568pxH337px.jpg)
+                background-image: url(../img/hamburgare@W528pxH313px.jpg)
             }
             .meals :nth-child(4) :first-child,.info-active:nth-of-type(4) :first-child{
-                background-image: url(../img/breads.jpg);
+                background-image: url(../img/bread@W472pxH313px.jpg);
             }
             .meals :nth-child(5) :first-child,.info-active:nth-of-type(5) :first-child, .cart-active :nth-child(5) :first-child{
-                background-image: url(../img/cucumber@W568pxH378px.jpg);
+                background-image: url(../img/cucumber@W470pxH313px.jpg);
             }
             .meals :nth-child(6) :first-child,.info-active:nth-of-type(6) :first-child{
-                background-image: url(../img/spaghetto@W568pxH426px.jpg);
+                background-image: url(../img/spaghetto@W417pxH313px.jpg);
             }
             .meals :nth-child(7) :first-child,.info-active:nth-of-type(7) :first-child{
-                background-image: url(../img/carrot_soup@W568pxH364px.jpg);
+                background-image: url(../img/carrot_soup@W488pxH313px.jpg);
             }
             .meals :nth-child(8) :first-child,.info-active:nth-of-type(8) :first-child, .cart-active :nth-child(6) :first-child{
-                background-image: url(../img/sandwich@W568pxH426px.jpg);
+                background-image: url(../img/sandwich@W418pxH313px.jpg);
             }
 
 /* Nav */
     nav{
         height: 100vh;
         display: flex;
-        background-image: url(../img/dark_wood_vegetables@mobile.jpg);
+        background-image: url(../img/dark_wood_vegetables@W548pxH823px.jpg);
         background-size: cover;
         background-position: right;
-        width: 0vw;
+        width: 0;
         opacity: 0;
         transition: 0.6s;
         position: fixed;
@@ -199,30 +197,33 @@ body{
         opacity: 1;
     }
     .closer{
-    position: absolute;
-    right: 1rem;
-    padding:0;
+        position: absolute;
+        right: 1rem;
+        padding:0;
     } 
     .noscroll{
         overflow-y: hidden;
     }
 
 /* Shader */
-    .shadow-active{
-        opacity: 0.6 !important;
-        z-index: 1 !important;
-    }
-    #theShadow{
+    .shadow{
         background-color: black;
         opacity: 0;
         position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.6;
+        z-index: 1;
+        display: none;
     }
-
+    .shadow-active{
+        display: block;
+    }
+    
 /* Cart */
-    .cart-inactive{
+    .cart{
         margin-top:0;
         height: 0;
         width: 0;
@@ -231,13 +232,11 @@ body{
         position: fixed;
     }
     .cart-active{
-        margin-top:0;
         height: 110vw;
         width: 90vw;
         opacity: 1;
-        margin-top: 50%;
+        margin-top: 40%;
         display: grid;
-        grid-template-columns: 1fr;
         grid-template-rows: 11vw 16vw 16vw 16vw 16vw 20vw 1fr;
         padding: 0,5vh;
         z-index: 2;  
@@ -313,13 +312,13 @@ body{
             grid-area: 2/1;
         }
         .cartItem:nth-of-type(2){
-            grid-area: 3/2;
+            grid-area: 3/1;
         }
         .cartItem:nth-of-type(3){
             grid-area: 4/1;
         }
         .cartItem:nth-of-type(4){
-            grid-area: 5/2;
+            grid-area: 5/1;
         }
 
     /* How many items in cart */
@@ -332,15 +331,12 @@ body{
             margin-left: 1vh;
             margin-right: 1vh;
         }
-        .counter{
-            align-self: center;
-        }
-        .adder,.remover{
+        .adder,.remover,.counter{
             align-self: center;
         }
 
 /* Product info */
-    .info-inactive{
+    .info{
         position: fixed;
         margin-top:0;
         height: 0;
@@ -355,7 +351,7 @@ body{
         width: 95vw !important;
         transition: 0.6s;
         display: grid;
-        grid-template-columns: 6fr 0vw 8vw 8vw 8vw;
+        grid-template-columns: 6fr 0 8vw 8vw 8vw;
         grid-template-rows: 1fr 6vw 24vw;
         z-index: 2;  
         position: fixed;
@@ -377,26 +373,25 @@ body{
         margin: 0.5vh;
         width: auto;
     }
-    .infomealname{
+    .infomealpic,.infomealname,.explanation,.price{
         cursor: default;
+        margin: 0.5vh;
+    }
+    .infomealname{
         font-size: 100%;
         display: grid;
         grid-template-rows: 6vw 24vw;
     }
     .infomealpic{
-        cursor: default;
         grid-area: 1 / 1 /span 1/ span 1;
         height: 95%;
-        margin: 0.5vh;
         background-position: center;
     }
     .explanation{
-        cursor: default;
         position: relative;
         top: 24px;
         grid-area: 1/3/span 1/span 3;
         font-size: 2rem;
-        margin: 0.5vh;
         height: 85%;
         margin-left: 0;
         font-size: 0.6rem;
@@ -447,32 +442,31 @@ body{
     }
 
 /* om.html & kontakt.html */
-    .omtextbox{
-        background-color: lightskyblue;
+    .omtextbox,.kontaktbild,.ombild{
         border-radius: 1vh;
-        margin: 1vh;
-        padding: 1vh;
-        grid-area: 3 / 2 ;
+        margin: 0.5vh;
     }
     .kontaktbild,.ombild{
         height: 20vh;
         background-size: cover;
         background-position: center;
-        border-radius: 1vh;
-        margin: 1vh;
+        margin-bottom: 0;
         grid-area: 2 / 2 ;
         background-size: 40%;
         width: -webkit-fill-available;
     }
+    .omtextbox{
+        background-color: lightskyblue;
+        margin-top: 0;
+        padding: 1vh;
+        grid-area: 3 / 2 ;
+    }
     .ombild{
-        background-image: url(../img/om@W995pxH746px.jpg);
-        position: relative;
-        margin-right: 1vh;
+        background-image: url(../img/om@W220pxH165px.jpg);
     }
     .kontaktbild{
-        background-image: url(../img/kontakt@W995pxH746px.jpg);
+        background-image: url(../img/kontakt@W220pxH165px.jpg);
     }
-    
     
 @media only screen and (min-device-width : 1024px){
     /* Header */
@@ -501,10 +495,9 @@ body{
         }
         .ad{
             height: 35vh;
-            background-image: url(../img/ad@W1400pxH683px.jpg),url(../img/alt_header@W2626pxH1496px.jpg);
+            background-image: url(../img/ad@W1400pxH683px.jpg),url(../img/alt_header@W1400pxH798px.jpg);
             background-position: center;
             margin: 1vh;
-            margin-right: 1vh;
         }
         .meals{
             height: 40vw;
@@ -520,7 +513,33 @@ body{
         .mealpic{
             height: 80%;
         }
-    
+
+        /* Mealpics */
+            .meals :nth-child(1) :first-child,.info-active:nth-of-type(1) :first-child, .cart-active :nth-child(3) :first-child{
+                background-image: url(../img/köttbullar@W568pxH426px.JPG);
+            }
+            .meals :nth-child(2) :first-child,.info-active:nth-of-type(2) :first-child, .cart-active :nth-child(4) :first-child{
+                background-image: url(../img/spaghetti@W568pxH426px.jpg);
+            }
+            .meals :nth-child(3) :first-child,.info-active:nth-of-type(3) :first-child{
+                background-image: url(../img/hamburgare@W568pxH337px.jpg)
+            }
+            .meals :nth-child(4) :first-child,.info-active:nth-of-type(4) :first-child{
+                background-image: url(../img/bread@W568pxH377px.jpg);
+            }
+            .meals :nth-child(5) :first-child,.info-active:nth-of-type(5) :first-child, .cart-active :nth-child(5) :first-child{
+                background-image: url(../img/cucumber@W568pxH378px.jpg);
+            }
+            .meals :nth-child(6) :first-child,.info-active:nth-of-type(6) :first-child{
+                background-image: url(../img/spaghetto@W568pxH426px.jpg);
+            }
+            .meals :nth-child(7) :first-child,.info-active:nth-of-type(7) :first-child{
+                background-image: url(../img/carrot_soup@W568pxH364px.jpg);
+            }
+            .meals :nth-child(8) :first-child,.info-active:nth-of-type(8) :first-child, .cart-active :nth-child(6) :first-child{
+                background-image: url(../img/sandwich@W568pxH426px.jpg);
+            }
+
     /* om.html & kontakt.html */
         .wrapper2{
             display: grid;
@@ -530,18 +549,24 @@ body{
         .kontaktbild,.ombild{
             height: 35vh;
         }
-        /* .omtextbox,.kontaktbild,.ombild{ */
-            /* margin-left: 0.4vw; */
-        /* } */
+        .kontaktbild,.ombild,.omtextbox{
+            margin: 1vh;
+            margin-left: 0.5vh;
+        }
+        .ombild{
+            background-image: url(../img/om@W995pxH746px.jpg);
+        }
+        .kontaktbild{
+            background-image: url(../img/kontakt@W995pxH746px.jpg);
+        }
 
     /* Nav */
         nav{
             display: block;
             grid-area: 2/1;
-            background-image: url(../img/cutting_board@W1536pxH1024px.jpg);
+            background-image: url(../img/cutting_board@W473pxH315px.jpg);
             background-size: cover;
             margin: 1vh;
-            margin-right:0; 
             border-radius: 1vh;
             position: unset;
             left: 0;
@@ -563,9 +588,9 @@ body{
         }
         .info-active{
             margin-top: 5vw !important;
-            height: 50vw !important;
+            height: 80vh !important;
             width: 60vw !important;
-            grid-template-columns: 1fr 0vw 5vw 5vw 5vw;
+            grid-template-columns: 1fr 0 5vw 5vw 5vw;
             grid-template-rows: 1fr 2vw 8vw;
             right: 20vw;
         }
@@ -630,5 +655,4 @@ body{
     .cartbuy{
         grid-area: 5/2;
     }
-
 }
