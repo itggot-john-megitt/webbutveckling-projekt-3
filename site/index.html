@@ -20,67 +20,67 @@
             <img class="ad"></img>
             <section class="meals"> 
                 <section class="meal">
-                    <img class="mealpic" onclick="open1()">
+                    <img class="mealpic" onclick="showInfo(1)">
                         <i class="veg">V</i>
                     </img>
-                    <p class="mealname" onclick="open1()">Köttbullar </p>
+                    <p class="mealname" onclick="showInfo(1)">Köttbullar </p>
                     <p class="price">50 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
                 <section class="meal">
-                    <img class="mealpic" onclick="open2()">
+                    <img class="mealpic" onclick="showInfo(2)">
                         <i class="veg">V</i>
                         <i class="material-icons mealicon eco">local_florist</i>
                     </img>
-                    <p class="mealname" onclick="open2()">Spaghetti</p>
+                    <p class="mealname" onclick="showInfo(2)">Spaghetti</p>
                     <p class="price">40 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
                 <section class="meal">
-                    <img class="mealpic" onclick="open3()">
+                    <img class="mealpic" onclick="showInfo(3)">
                         <i class="material-icons mealicon eco">local_florist</i>
                     </img>                
-                    <p class="mealname" onclick="open3()">Hamburgare</p>
+                    <p class="mealname" onclick="showInfo(3)">Hamburgare</p>
                     <p class="price">35 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
                 <section class="meal">
-                    <img class="mealpic" onclick="open4()"></img>
-                    <p class="mealname" onclick="open4()">Mycket bröd</p>
+                    <img class="mealpic" onclick="showInfo(4)"></img>
+                    <p class="mealname" onclick="showInfo(4)">Mycket bröd</p>
                     <p class="price">55 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
                 <section class="meal">
-                    <img class="mealpic" onclick="open5()">
+                    <img class="mealpic" onclick="showInfo(5)">
                         <i class="veg">V</i>
                     </img>
-                    <p class="mealname" onclick="open5()">Grönsak</p>
+                    <p class="mealname" onclick="showInfo(5)">Grönsak</p>
                     <p class="price">35 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
                 <section class="meal">
-                    <img class="mealpic"id="mealpic6" onclick="open6()">
+                    <img class="mealpic"id="mealpic6" onclick="showInfo(6)">
                         <i class="veg">V</i>
                         <i class="material-icons mealicon eco">local_florist</i>
                     </img>
-                    <p class="mealname" onclick="open6()">Spaghetto</p>
+                    <p class="mealname" onclick="showInfo(6)">Spaghetto</p>
                     <p class="price">5 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
                 <section class="meal">
-                    <img class="mealpic" onclick="open7()">
+                    <img class="mealpic" onclick="showInfo(7)">
                         <i class="veg">V</i>
                         <i class="material-icons mealicon eco">local_florist</i>
                     </img>
-                    <p class="mealname" onclick="open7()">Soppa</p>
+                    <p class="mealname" onclick="showInfo(7)">Soppa</p>
                     <p class="price">25 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>        
                 </section>                
                 <section class="meal" id="meal8">
-                    <img class="mealpic" onclick="open8()">
+                    <img class="mealpic" onclick="showInfo(8)">
                         <i class="material-icons mealicon eco">local_florist</i>
                     </img>
-                    <p class="mealname" onclick="open8()">Frukost</p>
+                    <p class="mealname" onclick="showInfo(8)">Frukost</p>
                     <p class="price">70 kr</p>
                     <div class="buy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>
                 </section>
@@ -89,7 +89,7 @@
         <section class="mealinfos">
             <section id="theInfo1" class="info">
                 <img class="mealpic infomealpic"></img>    
-                <a onclick="open1()" class="white closeInfo"><i class="material-icons">close </i></a>
+                <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>
                 <p class="mealname infomealname">Köttbullar<p class="mealname infomealname mealdesc">Man kan inte inte gilla köttbullar, om man inte är vegetarian kanske, då har vi falafel istället. Fungerar bra att köpa i kombination med flera spaghetti eller en spaghetto.</p></p>
                 <p class="explanation"><i class="veg">V</i>Rätten är vegetarisk eller har vegetariskt alternativ. </br></br> Innehåll:</br>Kött</br>Bulle</p>
                 <p class="price infoprice">50 kr</p>
@@ -97,7 +97,7 @@
             </section>
             <section id="theInfo2" class="info">
                 <img class="mealpic infomealpic"></img>
-                <a onclick="open2()" class="white closeInfo"><i class="material-icons">close </i></a>            
+                <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>            
                 <p class="mealname infomealname">Flera spaghetti <p class="mealname infomealname mealdesc">Dessa eleganta spaghetti tillagas med ytterst skicklighet och kommer från ett land i fjärran. Ät kokt, med sås eller rå. Visste du att det kallas att äta "al dente" om du äter den rå?</p></p>
                 <p class="explanation"><i class="veg">V</i>Rätten är vegetarisk eller har vegetariskt alternativ. </br></br><i class="material-icons mealicon eco">local_florist</i>Rätten har Johns ekologiska certifikat vilket betyder att den är tillräckligt miljövänlig. Ring om du har frågor eller planerar att anmäla miljöbrott.</br></br> Innehåll:</br>Spaghett</p>
                 <p class="price infoprice">40 kr</p>
@@ -105,7 +105,7 @@
             </section>
             <section id="theInfo3" class="info">
                 <img class="mealpic infomealpic"></img>    
-                <a onclick="open3()" class="white closeInfo"><i class="material-icons">close </i></a>            
+                <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>            
                 <p class="mealname infomealname">Hamburgare<p class="mealname infomealname mealdesc">Hamburgare innehåller inte ham så varför heter de hamburgare? Maila mig om du vet, tack. Köp en hamburgare/sojaburgare idag.</p></p>
                 <p class="explanation"><i class="material-icons mealicon eco">local_florist</i>Rätten har Johns ekologiska certifikat vilket betyder att den är tillräckligt miljövänlig. Ring om du har frågor eller planerar att anmäla miljöbrott.</br></br> Innehåll:</br>Ham</br>Burgare</br>Kanske en grönsak, vad vet jag? Kolla bilden. </p>
                 <p class="price infoprice">35 kr</p>
@@ -113,7 +113,7 @@
             </section>
             <section id="theInfo4" class="info">
                 <img class="mealpic infomealpic"></img>    
-                <a onclick="open4()" class="white closeInfo"><i class="material-icons">close </i></a>            
+                <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>            
                 <p class="mealname infomealname">Mycket mat<p class="mealname infomealname mealdesc">Bröd?</p></p>
                 <p class="explanation">Innehåll:</br>Brödkanter</br>Gluten</br>Deg</p>
                 <p class="price infoprice">55 kr</p>
@@ -121,7 +121,7 @@
             </section>
             <section id="theInfo5" class="info">
                 <img class="mealpic infomealpic"></img>    
-                <a onclick="open5()" class="white closeInfo"><i class="material-icons">close </i></a>            
+                <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>            
                 <p class="mealname infomealname">Grönsak<p class="mealname infomealname mealdesc">En grönsak om dagen håller doktor borta från magen. Åtminstone 50 meter bort sedan han fick domen om kontaktförbud i vintras.</p></p>
                 <p class="explanation"><i class="veg">V</i>Rätten är vegetarisk eller har vegetariskt alternativ. </br></br> Innehåll:</br>Beror på, det måste inte vara en gurka.</p>
                 <p class="price infoprice">35 kr</p>
@@ -129,7 +129,7 @@
             </section>
             <section id="theInfo6" class="info">
                 <img class="mealpic infomealpic"></img>    
-                <a onclick="open6()" class="white closeInfo"><i class="material-icons">close </i></a>
+                <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>
                 <p class="mealname infomealname">En spaghetto
                     <p class="mealname infomealname mealdesc">
                         "Spaghetto (plural spaghetti)</br>
@@ -144,7 +144,7 @@
                 </section>
                 <section id="theInfo7" class="info">
                     <img class="mealpic infomealpic"></img>    
-                    <a onclick="open7()" class="white closeInfo"><i class="material-icons">close </i></a>          
+                    <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>          
                     <p class="mealname infomealname">Soppa<p class="mealname infomealname mealdesc">Soppa är gott, tycker jag och nu tycker du också det. Jag tror det är morotsoppa, testa och se, eller smaka, du bestämmer reglerna.</p></p>
                     <p class="explanation"><i class="veg">V</i>Rätten är vegetarisk eller har vegetariskt alternativ. </br></br><i class="material-icons mealicon eco">local_florist</i>Rätten har Johns ekologiska certifikat vilket betyder att den är tillräckligt miljövänlig. Ring om du har frågor eller planerar att anmäla miljöbrott.</br></br>Innehåll:</br>Morot</br>Nästan buljong</br>Vatten</p>
                     <p class="price infoprice">25 kr</p>
@@ -152,25 +152,15 @@
                 </section>
                 <section id="theInfo8" class="info">
                     <img class="mealpic infomealpic"></img>    
-                    <a onclick="open8()" class="white closeInfo"><i class="material-icons">close </i></a>        
+                    <a onclick="hideInfo()" class="white closeInfo"><i class="material-icons">close </i></a>        
                     <p class="mealname infomealname">Frukost<p class="mealname infomealname mealdesc">Min frukost är inte dyr, din frukost är dyr. Äta bör man annars dör man, så köp frukost. Tack för att du kom till min TED-talk.</p></p>
                     <p class="explanation"><i class="material-icons mealicon eco">local_florist</i>Rätten har Johns ekologiska certifikat vilket betyder att den är tillräckligt miljövänlig. Ring om du har frågor eller planerar att anmäla miljöbrott.</br></br>Innehåll:</br>Bröd</br>Smörgåspålägg</br>Bröd</p>
                     <p class="price infoprice">70 kr</p>
                     <div class="buy infobuy"> <p class="text">Köp</p> <i class="material-icons text"> add_shopping_cart</i></div>    
                 </section>      
             </section>
-
-            <!-- Ursäkta antalet skuggor, jag förstår inte javascript och javascript förstår inte mig-->
-            <section onclick="open1()" class="shadow" id="theShadow1"></section>
-            <section onclick="open2()" class="shadow" id="theShadow2"></section>
-            <section onclick="open3()" class="shadow" id="theShadow3"></section>
-            <section onclick="open4()" class="shadow" id="theShadow4"></section>
-            <section onclick="open5()" class="shadow" id="theShadow5"></section>
-            <section onclick="open6()" class="shadow" id="theShadow6"></section>
-            <section onclick="open7()" class="shadow" id="theShadow7"></section>
-            <section onclick="open8()" class="shadow" id="theShadow8"></section>
+            <section onclick="hideInfo()" class="shadow" id="theShadow"></section>
             <section onclick="openCloseCart()" class="shadow" id="theCartShadow"></section>
-            
             <div id="theCart" class="cart">
                 <p class="carttitle">Kundvagn</p>
                 <div onclick="openCloseCart()" class="cartCloser"><i class="material-icons">close </i></div>
